@@ -1,0 +1,26 @@
+name: C Program CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up C compiler
+      run: sudo apt-get install -y gcc
+
+    - name: Compile C program
+      run: gcc -o project_work_on_c project_work_on_c.c
+
+    - name: Run C program
+      run: ./project_work_on_c
