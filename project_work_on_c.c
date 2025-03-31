@@ -9,10 +9,8 @@ The menu contains option
 */
 
 #include<stdio.h>
-#include<conio.h>
 #include<string.h> //for string handeling functions
 #include<stdlib.h> //for exit() function
-#include<windows.h> //for sleep() function
 
 void welcome_menu(); //welcome module
 void main_menu(); //displays main manu
